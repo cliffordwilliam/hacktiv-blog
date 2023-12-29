@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 export default function Public() {
   const links = [
     { name: "Home", endpoint: "/public-home" },
-    { name: "Sign Up", endpoint: "/register" },
+    // { name: "Sign Up", endpoint: "/register" },
     { name: "Login", endpoint: "/login" },
   ];
 

@@ -15,7 +15,26 @@ ul {
   padding: 0;
   line-height: 1.5;
 }
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 1rem;
+}
 p {
+  font-size: 1rem;
   line-height: 1.75;
 }
 dialog[open] {
@@ -46,7 +65,12 @@ button,
   font-size: inherit;
   font-weight: inherit;
   padding: 0.5rem 1rem;
-  border-radius: 9rem;
+  border-radius: 0.5rem;
+}
+button.active, .btn.active{
+  border: 1px solid #e68;
+  background-color: #e68;
+  color: #000;
 }
 html,
 body,
@@ -60,12 +84,13 @@ body,
 }
 main {
   flex: 1;
-  padding: 1rem;
 }
 img {
   display: block;
+  min-width: 100%;
   width: 100%;
-  height: auto;
+  min-height: 100%;
+  height: 100%;
   object-fit: cover;
 }
 a {
@@ -84,6 +109,12 @@ input[type="password"] {
   display: block;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
+}
+hr {
+  width: 100%;
+}
+.f1 {
+  flex: 1;
 }
 .wf {
   width: 100%;
@@ -111,6 +142,7 @@ input[type="password"] {
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px #0001, 0 1px 2px #0003;
   background-color: #fff;
+  overflow: hidden;
 }
 .hf {
   display: flex;
@@ -118,8 +150,17 @@ input[type="password"] {
   gap: 1rem;
   flex-wrap: wrap;
 }
+.nw {
+  flex-wrap: nowrap;
+}
 .mra {
   margin-right: auto;
+}
+.mla {
+  margin-left: auto;
+}
+.mta {
+  margin-top: auto;
 }
 .c {
   width: min(100%, 100rem);
@@ -129,10 +170,17 @@ input[type="password"] {
 }
 .g {
   display: grid;
-  width: 100%;
   grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
   grid-auto-rows: auto;
   gap: 1rem;
+  width: 100%;
+}
+.g2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(40rem, 100%), 1fr));
+  grid-auto-rows: auto;
+  gap: 1rem;
+  width: 100%;
 }
 .cc {
   display: flex;
@@ -187,6 +235,9 @@ input[type="password"] {
     opacity: 1;
   }
 }
+.pn {
+  pointer-events: none;
+}
 @keyframes typing {
   0.0000%, 27.3488% { content: ""; }
   1.1395%, 26.2093% { content: "d"; }
@@ -240,4 +291,117 @@ input[type="password"] {
 }
 .hero-title{
   font-size: max(2rem, 6vmin);
+}
+.hero-subtitle{
+  font-size: max(1rem, 3vmin);
+}
+.hero {
+  padding-top: max(10rem, 30vmin);
+  padding-bottom: max(10rem, 30vmin);
+  overflow: hidden;
+}
+.rel {
+  position: relative;
+}
+.z2 {
+  position: relative;
+  z-index: 2;
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(.8);
+}
+.tw {
+  color: #fff;
+  text-shadow: 0 0 .5rem #000;
+}
+.loader {
+  border: 1rem solid #eee;
+  border-top: 1rem solid #39d;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.transparent {
+  background-color: transparent;
+  border: none;
+}
+.ng {
+  gap: 0;
+}
+.alt {
+  align-items: flex-start;
+}
+.alb {
+  align-items: flex-end;
+}
+.s {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.l1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+          line-clamp: 1; 
+  -webkit-box-orient: vertical;
+}
+.l3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+          line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}
+.hf {
+  height: 100%;
+}
+.hm {
+  height: 30rem;
+}
+.hs {
+  height: 20rem;
+  min-height: 20rem;
+}
+.oh {
+  overflow: hidden;
+}
+.slide {
+  max-width: min(100%, 100rem);
+}
+.slide-con {
+  transition: left .2s ease;
+}
+.dot {
+  width: 1rem;
+  height: 1rem;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 100rem;
+}
+.dot.active{
+  background-color: #fff;
+  border: 1px solid #000;
+}
+.btn.bw, button.bw {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.grey {
+  background-color: #ddd;
 }

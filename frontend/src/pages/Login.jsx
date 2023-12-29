@@ -8,10 +8,12 @@ import { useNavigate } from "react-router-dom";
 export default function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   function saveToken(data) {
     localStorage.setItem("token", data.access_token);
     navigate("/");
   }
+
   const postLogin = (formData) => {
     const { email, password } = formData;
     dispatch(
@@ -32,8 +34,8 @@ export default function Login() {
   };
 
   const fields = [
-    { name: "email", label: "Email", type: "email", required: true },
-    { name: "password", label: "Password", type: "password", required: true },
+    { name: "email", label: "Email", type: "email" },
+    { name: "password", label: "Password", type: "password" },
   ];
 
   const extraLink = {

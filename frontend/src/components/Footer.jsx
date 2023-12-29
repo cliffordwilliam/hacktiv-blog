@@ -40,7 +40,7 @@ export default function Footer({ links }) {
               </li>
               {links.map(({ name, endpoint }) => (
                 <li key={endpoint}>
-                  <Link onClick={close} to={endpoint}>
+                  <Link className="b" onClick={close} to={endpoint}>
                     {name}
                   </Link>
                 </li>

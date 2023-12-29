@@ -56,7 +56,7 @@ export function request({
         method,
         url,
         ...options,
-        data: options.data,
+        data: options && options.data,
       });
       document.querySelector("dialog").close();
       dispatch(ok(res.data));

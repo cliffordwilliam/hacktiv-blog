@@ -22,13 +22,13 @@ export default function Header({ links, buttons }) {
         <nav>
           <ul id="m1" className="hf menu">
             <li>
-              <Link className="mra menu-toggler" to={"/public-home"}>
+              <Link className="mra menu-toggler b" to={"/public-home"}>
                 <img className="w1" src={logo} alt="" />
               </Link>
             </li>
             {links.map(({ name, endpoint }) => (
               <li key={endpoint}>
-                <Link onClick={close} to={endpoint}>
+                <Link className="b" onClick={close} to={endpoint}>
                   {name}
                 </Link>
               </li>

@@ -1,14 +1,20 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import PublicHeader from "../components/PublicHeader";
-import PublicFooter from "../components/PublicFooter";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-export default function Global() {
+export default function Public() {
+  const links = [
+    { name: "Home", endpoint: "/public-home" },
+    { name: "Sign Up", endpoint: "/register" },
+    { name: "Login", endpoint: "/login" },
+  ];
+
   return (
     <>
-      <PublicHeader />
+      <Header links={links}></Header>
       <Outlet />
-      <PublicFooter />
+      <Footer links={links}></Footer>
     </>
   );
 }

@@ -1,3 +1,3 @@
 export default class c {
-  static baseUrl = "http://localhost:3000";
+  static baseUrl = "https://phase2-aio.vercel.app";
 }

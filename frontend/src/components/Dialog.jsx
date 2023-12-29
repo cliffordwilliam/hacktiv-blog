@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 export default function Dialog() {
   const { data, loading, error } = useSelector((state) => state.api);
   return (
-    <dialog>
+    <dialog className="p2 card w6">
       {data && <h2>Success</h2>}
       {error && <h2>Error</h2>}
       {loading && <h2>Loading</h2>}

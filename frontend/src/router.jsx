@@ -9,6 +9,7 @@ import Global from "./layouts/Global.jsx";
 import Home from "./pages/Home.jsx";
 import Register from "./pages/Register.jsx";
 import Login from "./pages/Login.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,9 +41,17 @@ const router = createBrowserRouter([
             path: "/login",
             element: <Login />,
           },
+          {
+            path: "/public-home",
+            element: <Home />,
+          },
         ],
       },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 
